@@ -4,7 +4,7 @@ Version=1
 
 [Preferences]
 Username=
-Password=2498
+Password=2677
 Database=
 DateFormat=
 CommitCount=0
@@ -13,39 +13,39 @@ InitScript=
 
 [Table]
 Owner=SYS
-Name=LOANS
+Name=CHECKS
 Count=400
 
 [Record]
-Name=LOAN_ID
+Name=CHECK_ID
 Type=NUMBER
 Size=
 Data=Random(10, 10000)
 Master=
 
 [Record]
-Name=LOAN_AMOUNT
+Name=CHECK_NUMBER
 Type=NUMBER
 Size=
-Data=Random(100, 100000)
+Data=Random(100000, 10000000)
 Master=
 
 [Record]
-Name=INTEREST_RATE
+Name=AMOUNT
 Type=NUMBER
 Size=
-Data=Random(1, 0)
+Data=Random(100,10000)
 Master=
 
 [Record]
-Name=START_DATE
+Name=ISSUE_DATE
 Type=DATE
 Size=
 Data=List(select Account_Opening_Date from accounts)
 Master=
 
 [Record]
-Name=END_DATE
+Name=CLEARING_DATE
 Type=DATE
 Size=
 Data=List(select Account_Opening_Date from accounts)
