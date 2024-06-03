@@ -4,7 +4,7 @@ Version=1
 
 [Preferences]
 Username=
-Password=2277
+Password=2801
 Database=
 DateFormat=
 CommitCount=0
@@ -14,13 +14,13 @@ InitScript=
 [Table]
 Owner=SYS
 Name=DEPOSITS
-Count=400
+Count=500
 
 [Record]
 Name=DEPOSITID
 Type=NUMBER
 Size=
-Data=Random(20, 1000)
+Data=Sequence(999, [Inc], [WithinParent]) 
 Master=
 
 [Record]
@@ -34,14 +34,14 @@ Master=
 Name=DEPOSIT_DATE
 Type=DATE
 Size=
-Data=List(select Account_Opening_Date from accounts)
+Data=Random(01/01/18, 01/01/21)
 Master=
 
 [Record]
 Name=MATURITY_DATE
 Type=DATE
 Size=
-Data=List(select Account_Opening_Date from accounts)
+Data=Random(01/01/21, 01/01/25)
 Master=
 
 [Record]

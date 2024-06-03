@@ -4,7 +4,7 @@ Version=1
 
 [Preferences]
 Username=
-Password=2825
+Password=2536
 Database=
 DateFormat=
 CommitCount=0
@@ -14,13 +14,13 @@ InitScript=
 [Table]
 Owner=SYS
 Name=TRANSACTIONS
-Count=400
+Count=500
 
 [Record]
 Name=TRANSACTION_ID
 Type=NUMBER
 Size=
-Data=Random(10, 1000)
+Data=Sequence(999999999, [Inc], [WithinParent])
 Master=
 
 [Record]
@@ -41,6 +41,6 @@ Master=
 Name=TRANSACTION_DATE
 Type=DATE
 Size=
-Data=List(select Account_Opening_Date from accounts)
+Data=Random(01/05/18,01/06/24)
 Master=
 

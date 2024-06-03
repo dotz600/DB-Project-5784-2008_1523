@@ -4,7 +4,7 @@ Version=1
 
 [Preferences]
 Username=
-Password=2856
+Password=2429
 Database=
 DateFormat=
 CommitCount=0
@@ -14,13 +14,13 @@ InitScript=
 [Table]
 Owner=SYS
 Name=ACCOUNTS
-Count=400
+Count=500
 
 [Record]
 Name=ACCOUNT_ID
 Type=NUMBER
 Size=
-Data=Random(10, 1000)
+Data=Sequence(10, [Inc], [WithinParent])
 Master=
 
 [Record]
@@ -48,6 +48,6 @@ Master=
 Name=ACCOUNT_OPENING_DATE
 Type=DATE
 Size=
-Data=List(select account_opening_date from accounts)
+Data=Random(01/01/13, 01/01/18)
 Master=
 

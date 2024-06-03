@@ -4,7 +4,7 @@ Version=1
 
 [Preferences]
 Username=
-Password=2677
+Password=2658
 Database=
 DateFormat=
 CommitCount=0
@@ -14,13 +14,13 @@ InitScript=
 [Table]
 Owner=SYS
 Name=CHECKS
-Count=400
+Count=500
 
 [Record]
 Name=CHECK_ID
 Type=NUMBER
 Size=
-Data=Random(10, 10000)
+Data=Sequence(999999, [Inc], [WithinParent])
 Master=
 
 [Record]
@@ -41,14 +41,14 @@ Master=
 Name=ISSUE_DATE
 Type=DATE
 Size=
-Data=List(select Account_Opening_Date from accounts)
+Data=Random(01/01/18, 01/01/24)
 Master=
 
 [Record]
 Name=CLEARING_DATE
 Type=DATE
 Size=
-Data=List(select Account_Opening_Date from accounts)
+Data=Random(01/01/24, 01/01/25)
 Master=
 
 [Record]

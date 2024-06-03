@@ -4,7 +4,7 @@ Version=1
 
 [Preferences]
 Username=
-Password=2171
+Password=2538
 Database=
 DateFormat=
 CommitCount=0
@@ -14,13 +14,13 @@ InitScript=
 [Table]
 Owner=SYS
 Name=CREDIT_CARDS
-Count=400
+Count=500
 
 [Record]
 Name=CARD_ID
 Type=NUMBER
 Size=
-Data=Random(100, 100000)
+Data=Sequence(9999, [Inc], [WithinParent])
 Master=
 
 [Record]
@@ -41,7 +41,7 @@ Master=
 Name=EXPIRATION_DATE
 Type=DATE
 Size=
-Data=List(select Account_Opening_Date from accounts)
+Data=Random(01/01/21, 01/01/26)
 Master=
 
 [Record]
